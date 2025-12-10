@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
+import ContactCard from "./components/ContactCard";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
             I thrive in collaborative, fast-paced environments where I can turn complex ideas into impactful solutions.        
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            I'm especially interested in internships and roles in software engineering, machine learning, data science, quantitative research, and full-stack development, where I can leverage my technical and Mathematical skills to deliver scalable and impactful products.
+            I'm especially interested in internships and roles in software engineering, machine learning, and quant trader, where I can leverage my technical and Mathematical skills to deliver scalable and impactful products.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
             Outside of class, I run a STEM tutoring practice, providing one-on-one lessons to 10+ students per semester, combining my love for Math & Science with a drive to make education more accessible.
@@ -185,31 +186,32 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="mb-20">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Contact</h2>
-          <ul className="text-lg text-gray-700">
-            <li>Email: <span className="font-semibold">iamton2547@gmail.com</span></li>
-            <li>
-              Instagram:{" "}
-              <a 
-                href="https://www.instagram.com/nitipon_ton/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold underline"
-              >
-                nitipon_ton
-              </a>
-            </li>
-            <li>
-              LinkedIn:{" "}
-              <a 
-                href="https://www.linkedin.com/in/nitipon-tony/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold underline"
-              >
-                linkedin.com/in/nitipon-tony
-              </a>
-            </li>
-          </ul>
+          <div className="flex flex-col gap-3">
+            <ContactCard
+              title="Instagram"
+              desc="nitipon_ton"
+              img="/instagram.png"
+              link="https://www.instagram.com/nitipon_ton/"
+            />
+            <ContactCard
+              title="Email"
+              desc="iamton2547@gmail.com"
+              img="/email.png"
+              link="https://mail.google.com/mail/u/0/#inbox"
+            />
+            <ContactCard
+              title="LinkedIn"
+              desc="Nitipon (Tony) Trimaitreepituk"
+              img="/LinkedIn.jpg"
+              link="https://www.linkedin.com/in/nitipon-tony/"
+            />
+            <ContactCard
+              title="Facebook"
+              desc="Nitipon Trimaitreepituk"
+              img="/Facebook.jpg"
+              link="https://www.facebook.com/nitipon.trimaitreepituk/"
+            />
+          </div>
         </section>
       </main>
     </>
