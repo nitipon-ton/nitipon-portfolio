@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Nitipon Portfolio",
     images: [
       {
-        url: "/og-image.jpg", // add to public folder
+        url: "/og-image.JPG", // add to public folder
         width: 1200,
         height: 630,
         alt: "Nitipon Portfolio Preview",
