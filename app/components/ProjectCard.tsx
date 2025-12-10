@@ -1,8 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
-export default function ProjectCard({ title, desc, tags, img, link }) {
+interface ProjectCardProps {
+  title: string;
+  desc: string;
+  tags: string[];
+  img: string;
+  link: string;
+}
+
+export default function ProjectCard({ title, desc, tags, img, link }: ProjectCardProps) {
   return (
     <motion.a
       href={link}
@@ -30,7 +39,7 @@ export default function ProjectCard({ title, desc, tags, img, link }) {
 
         {/* Tag chips */}
         <div className="flex flex-wrap gap-2">
-          {tags.map((t, i) => (
+          {tags.map((t: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, i: Key | null | undefined) => (
             <span
               key={i}
               className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full"
