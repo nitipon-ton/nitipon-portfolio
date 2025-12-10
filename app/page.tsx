@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
-import FadeInWhenVisible from "./components/FadeInWhenVisible";
 
 export default function Home() {
   return (
