@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Nitipon Trimaitreepituk" }],
   creator: "Nitipon Trimaitreepituk",
   publisher: "Nitipon Trimaitreepituk",
-  metadataBase: new URL("https://nitipon-portfolio.vercel.app"), // change after deploy
+  metadataBase: new URL("https://nitipon-portfolio.vercel.app"),
 
   openGraph: {
     title: "Nitipon T. — Portfolio",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Nitipon Portfolio",
     images: [
       {
-        url: "/profile.jpg", // add to public folder
+        url: "/profile.jpg",
         width: 1200,
         height: 630,
         alt: "Nitipon Portfolio Preview",

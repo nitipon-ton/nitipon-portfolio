@@ -38,19 +38,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <ProjectCard
-              title="Yahtzee Bot"
-              desc="A probability-optimized Yahtzee engine using expected value, dynamic simulations, and strategy heuristics. Beats most human players."
-              img="/yahtzee.jpg"
-              link="https://github.com/nitipon-ton/Yahtzee"
-              tags={["Java", "Math", "Simulation", "Probability"]}
-            />
-
-            <ProjectCard
-              title="Portfolio Website"
-              desc="Aesthetic, animated Next.js portfolio built from scratch with Framer Motion, Tailwind CSS, and responsive design."
-              img="/profile.jpg"
-              link="#"
-              tags={["Next.js", "React", "Tailwind", "Framer Motion"]}
+              title="Credit Card fraud detection"
+              desc="Using machine learning algorithms to identify and prevent fraudulent credit card transactions."
+              img="/credit-card-thief.png"
+              link="https://github.gatech.edu/pages/ntrimait3/Machine-Learning-4641-Group-9/"
+              tags={["Python", "Random Forest", "Logistic Regression", "Neural Networks"]}
             />
 
             <ProjectCard
@@ -67,6 +59,22 @@ export default function Home() {
               img="/GreenWise.jpg"
               link="https://devpost.com/software/greenwise-pwzv6u"
               tags={["beautiful-soup", "Flask", "JavaScript", "json", "numpy", "pandas", "python", "scikit-learn", "figma", "HTML/CSS", "jupyter-notebook"]}
+            />
+            
+            <ProjectCard
+              title="Yahtzee Bot"
+              desc="A probability-optimized Yahtzee engine using expected value, dynamic simulations, and strategy heuristics. Beats most human players."
+              img="/yahtzee.jpg"
+              link="https://github.com/nitipon-ton/Yahtzee"
+              tags={["Java", "Math", "Simulation", "Probability"]}
+            />
+
+            <ProjectCard
+              title="Portfolio Website"
+              desc="Aesthetic, animated Next.js portfolio built from scratch with Framer Motion, Tailwind CSS, and responsive design."
+              img="/profile.jpg"
+              link="#"
+              tags={["Next.js", "React", "Tailwind", "Framer Motion"]}
             />
           </div>
         </section>
@@ -117,13 +125,35 @@ export default function Home() {
                 video
               </a>
             </li>
-            
+            <li>
+              International Teenagers Mathematics Olympiad 2019 — Gold Medal:{" "}
+              <a 
+                href="http://files.chiuchang.org.tw:8080/MyWeb/download/docu/ITMO%202019%20invitation.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline mr-3"
+              >
+                about
+              </a>
+            </li>
+            <li>
+              Bulgaria International Mathematics Competition 2018 — Silver Medal:{" "}
+              <a 
+                href="https://chiuchang.org/imc/en/2018/07/24/bimc-2018-results-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline mr-3"
+              >
+                results
+              </a>
+            </li>
+
           </ul>
         </section>
 
         {/* INTERVIEW SECTION */}
         <section id="interview" className="mb-32">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Interview</h2>
+          <h2 className="text-4xl font-bold text-blue-700 mb-4">Interviews</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <ProjectCard
