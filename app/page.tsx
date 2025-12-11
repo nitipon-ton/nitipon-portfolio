@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 import ContactCard from "./components/ContactCard";
+import ExperienceCard from "./components/ExperienceCard";
 
 export default function Home() {
   return (
@@ -28,9 +29,19 @@ export default function Home() {
         {/* EXPERIENCE SECTION */}
         <section id="experience" className="mb-32">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Experience</h2>
-          <p className="text-lg text-gray-700">
-            Experience details coming soon.
-          </p>
+          <div className="text-lg text-gray-700">
+            <ExperienceCard
+              title="CODA Payments - Software Engineer Intern"
+              desc={[
+                "Built a framework to auto-generate tools from OpenAPI specs, reducing backend effort and improving scalability.",
+                "Simplified tool development by eliminating redundant code and enabling broader usability.",
+                "Worked with TypeScript, Vue.js, and DocumentDB to make tools accessible directly through the UI of the company chatbot."
+              ]}
+              tags={["Typescript", "SQL", "Vue.js"]}
+              img="/coda.jpg"
+              link="https://www.linkedin.com/company/coda/"
+            />
+          </div>
         </section>
 
         {/* PROJECTS SECTION */}
