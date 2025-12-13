@@ -29,17 +29,38 @@ export default function Home() {
         {/* EXPERIENCE SECTION */}
         <section id="experience" className="mb-32">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Experience</h2>
-          <div className="text-lg text-gray-700">
+          <div className="flex flex-col gap-3">
             <ExperienceCard
-              title="CODA Payments - Software Engineer Intern"
+              title="CODA Payments - Software Engineer Intern (May 2025 - Aug 2025)"
               desc={[
                 "Built a framework to auto-generate tools from OpenAPI specs, reducing backend effort and improving scalability.",
                 "Simplified tool development by eliminating redundant code and enabling broader usability.",
                 "Worked with TypeScript, Vue.js, and DocumentDB to make tools accessible directly through the UI of the company chatbot."
               ]}
-              tags={["Typescript", "SQL", "Vue.js"]}
+              tags={["Typescript", "SQL", "Vue.js", "LangChain", "OpenAPI", "Java", "Postman", "DocumentDB"]}
               img="/coda.jpg"
               link="https://www.linkedin.com/company/coda/"
+            />
+            <ExperienceCard
+              title="Private STEM Tutor (Mar 2022 - Present)"
+              desc={[
+                "Managed a profitable tutoring business with a client base of over 10 students per semester across subjects like Mathematics, Physics, Computer Science, Chemistry, Earth Science, and Astronomy.",
+                "Received multiple partnership offers from online learning platforms, selectively accepting collaborations that aligned with my tutoring goals while negotiating terms to maximize value.",
+                "Developed customized lesson plans and utilized LaTeX, Python, and online advertising strategies to enhance learning experiences and student engagement."
+              ]}
+              tags={["Mathematics", "Python", "LaTeX", "Physics", "Chemistry", "Earth Science", "Astronomy", "Marketing"]}
+              img="/face.jpg"
+              link="https://www.linkedin.com/in/nitipon-tony/"
+            />
+            <ExperienceCard
+              title="Information Technology Technician (Mar 2024 - Apr 2024)"
+              desc={[
+                "Provided technical support for live events and organizational projects, resolving issues in real time.",
+                "Helped improve the digital infrastructure of the Association of Thai Students in the U.S."
+              ]}
+              tags={["Technical Support", "Event Management", "IT"]}
+              img="/ATSA.png"
+              link="https://www.linkedin.com/school/atsathai/"
             />
           </div>
         </section>
