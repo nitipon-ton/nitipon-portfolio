@@ -31,7 +31,8 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Experience</h2>
           <div className="flex flex-col gap-3">
             <ExperienceCard
-              title="CODA Payments - Software Engineer Intern (May 2025 - Aug 2025)"
+              title="Software Engineer Intern (May 2025 - Aug 2025)"
+              company="CODA Payments"
               desc={[
                 "Built a framework to auto-generate tools from OpenAPI specs, reducing backend effort and improving scalability.",
                 "Simplified tool development by eliminating redundant code and enabling broader usability.",
@@ -43,6 +44,7 @@ export default function Home() {
             />
             <ExperienceCard
               title="Private STEM Tutor (Mar 2022 - Present)"
+              company="Self-Employed"
               desc={[
                 "Managed a profitable tutoring business with a client base of over 10 students per semester across subjects like Mathematics, Physics, Computer Science, Chemistry, Earth Science, and Astronomy.",
                 "Received multiple partnership offers from online learning platforms, selectively accepting collaborations that aligned with my tutoring goals while negotiating terms to maximize value.",
@@ -53,7 +55,19 @@ export default function Home() {
               link="https://www.linkedin.com/in/nitipon-tony/"
             />
             <ExperienceCard
+              title="Physics Tutor (May 2024 - Aug 2024)"
+              company="Thammasat Secondary School (TSS)"
+              desc={[
+                "Taught pre-college Physics through weekly lectures and assignments to prepare students for university-level science.",
+                "Wrote detailed progress reports for each student to the school administration, ensuring tailored academic support."
+              ]}
+              tags={["Physics", "Mathematics"]}
+              img="/TSS.jpg"
+              link="https://www.linkedin.com/company/thammasat-secondary-school/"
+            />
+            <ExperienceCard
               title="Information Technology Technician (Mar 2024 - Apr 2024)"
+              company="Association of Thai Students in the United States (ATSA)"
               desc={[
                 "Provided technical support for live events and organizational projects, resolving issues in real time.",
                 "Helped improve the digital infrastructure of the Association of Thai Students in the U.S."
@@ -61,6 +75,16 @@ export default function Home() {
               tags={["Technical Support", "Event Management", "IT"]}
               img="/ATSA.png"
               link="https://www.linkedin.com/school/atsathai/"
+            />
+            <ExperienceCard
+              title="Mathematics Tutor (Jul 2023 - Oct 2023)"
+              company="Monkey Everyday"
+              desc={[
+                "Designed and delivered a Mathematics crash course focused on preparing students for the King's Scholarship (a Thai government full scholarhip) Exam within 20 hours."
+              ]}
+              tags={["Mathematics", "LaTeX", "Curriculum Design", "Public Speaking"]}
+              img="/monkey.jpg"
+              link="https://www.linkedin.com/company/monkey-everyday/"
             />
           </div>
         </section>
