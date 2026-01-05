@@ -120,10 +120,10 @@ export default function Home() {
             
             <ProjectCard
               title="Yahtzee Bot"
-              desc="A probability-optimized Yahtzee engine using expected value, dynamic simulations, and strategy heuristics. Beats most human players."
+              desc="A probability-optimized Yahtzee engine using probability, dynamic simulations, and strategy heuristics. Beats most human players."
               img="/yahtzee.jpg"
-              link="https://github.com/nitipon-ton/Yahtzee"
-              tags={["Java", "Math", "Simulation", "Probability"]}
+              link="https://yahtzee-production.up.railway.app/health"
+              tags={["Java", "Math", "Simulation", "Probability", "CSS", "HTML"]}
             />
 
             <ProjectCard
@@ -243,6 +243,12 @@ export default function Home() {
         <section id="contact" className="mb-20">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Contact</h2>
           <div className="flex flex-col gap-3">
+            <ContactCard
+              title="GitHub"
+              desc="nitipon-ton"
+              img="/github.PNG"
+              link="https://github.com/nitipon-ton"
+            />
             <ContactCard
               title="Instagram"
               desc="nitipon_ton"
