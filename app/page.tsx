@@ -10,9 +10,9 @@ export default function Home() {
       <Header />
       <Hero />
 
-      <main className="pt-32 px-6 max-w-4xl mx-auto">
+      <main className="px-6 max-w-4xl mx-auto">
         {/* ABOUT SECTION */}
-        <section id="about" className="mb-32">
+        <section id="about" className="mb-16">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">About Me</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             I am a third-year Computer Science student at Georgia Institute of Technology, passionate about building innovative software and applying machine learning, algorithms, and data science to solve real-world problems.
@@ -27,7 +27,7 @@ export default function Home() {
         </section>
 
         {/* EXPERIENCE SECTION */}
-        <section id="experience" className="mb-32">
+        <section id="experience" className="mb-16">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Experience</h2>
           <div className="flex flex-col gap-3">
             <ExperienceCard
@@ -90,7 +90,7 @@ export default function Home() {
         </section>
 
         {/* PROJECTS SECTION */}
-        <section id="projects" className="mb-32">
+        <section id="projects" className="mb-16">
           <h2 className="text-4xl font-bold text-blue-700 mb-8">Projects</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -137,7 +137,7 @@ export default function Home() {
         </section>
 
         {/* ACHIEVEMENTS SECTION */}
-        <section id="achievements" className="mb-32">
+        <section id="achievements" className="mb-16">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Achievements</h2>
           <ul className="list-disc pl-6 text-gray-700 text-lg space-y-2">
             <li>
@@ -209,7 +209,7 @@ export default function Home() {
         </section>
 
         {/* INTERVIEW SECTION */}
-        <section id="interview" className="mb-32">
+        <section id="interview" className="mb-16">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Interviews</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -240,13 +240,13 @@ export default function Home() {
         </section>
 
         {/* CONTACT SECTION */}
-        <section id="contact" className="mb-20">
+        <section id="contact" className="mb-16">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Contact</h2>
           <div className="flex flex-col gap-3">
             <ContactCard
               title="GitHub"
               desc="nitipon-ton"
-              img="/github.PNG"
+              img="/github.png"
               link="https://github.com/nitipon-ton"
             />
             <ContactCard
