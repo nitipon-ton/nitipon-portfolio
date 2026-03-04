@@ -31,6 +31,16 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Experience</h2>
           <div className="flex flex-col gap-3">
             <ExperienceCard
+              title="Software Engineer (Jan 2026 - Present)"
+              company="WebDev @GT"
+              desc={[
+                "Developing LingoMate, a language learning platform with an interactive AI partner feature."
+              ]}
+              tags={["Typescript", "Express.js", "React", "Node.js"]}
+              img="/gtwebdev.jpg"
+              link="https://www.linkedin.com/company/gtwebdev/"
+            />
+            <ExperienceCard
               title="Software Engineer Intern (May 2025 - Aug 2025)"
               company="CODA Payments"
               desc={[
@@ -95,6 +105,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <ProjectCard
+              title="DSL: Data Saves Lives (Hacklytics 2026 - 3rd Place for Databricks Challenge)"
+              desc="Cleaned and unified humanitarian datasets using SQL and Python, enabling reliable humanitarian crisis analytics"
+              img="/DSL.jpg"
+              link="https://devpost.com/software/data-saves-lives-dsl"
+              tags={["Python", "SQL", "Databricks", "Javascript"]}
+            />
+
+            <ProjectCard
               title="Credit Card fraud detection"
               desc="Using machine learning algorithms to identify and prevent fraudulent credit card transactions."
               img="/credit-card-thief.png"
@@ -140,6 +158,17 @@ export default function Home() {
         <section id="achievements" className="mb-16">
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Achievements</h2>
           <ul className="list-disc pl-6 text-gray-700 text-lg space-y-2">
+            <li>
+              ICMT 2026 Division B — 8th place Individual, 5th place Constellation Round:{" "}
+              <a 
+                href="https://intercollegiatemathtournament.org/archives/2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline"
+              >
+                results
+              </a>
+            </li>
             <li>
               PUTNAM Math Competition 2024 — 1st in Georgia Tech (#126 Overall):{" "}
               <a 
