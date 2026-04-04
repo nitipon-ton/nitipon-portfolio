@@ -15,7 +15,7 @@ export default function Hero() {
 
       {/* Text */}
       <div className="max-w-xl flex flex-col gap-4">
-        <h1 className="text-4xl font-bold">Nitipon Trimaitreepituk</h1>
+        <h1 className="text-4xl font-bold">Nitipon (Tony) Trimaitreepituk</h1>
         <p className="text-lg text-gray-600">
           CS Student at Georgia Tech • Software Engineer • Math Enthusiast
         </p>

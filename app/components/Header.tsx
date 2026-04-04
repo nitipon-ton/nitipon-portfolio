@@ -3,7 +3,7 @@ export default function Header() {
     <header className="w-full py-6 px-8 bg-blue-600 text-white fixed top-0 left-0 z-50 shadow-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold tracking-wide">
-          Nitipon Trimaitreepituk
+          Nitipon (Tony) Trimaitreepituk
         </div>
 
         <nav className="flex gap-6 text-lg">
