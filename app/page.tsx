@@ -135,7 +135,7 @@ export default function Home() {
               link="https://devpost.com/software/greenwise-pwzv6u"
               tags={["beautiful-soup", "Flask", "JavaScript", "json", "numpy", "pandas", "python", "scikit-learn", "figma", "HTML/CSS", "jupyter-notebook"]}
             />
-            
+
             <ProjectCard
               title="Yahtzee Bot"
               desc="A probability-optimized Yahtzee engine using probability, dynamic simulations, and strategy heuristics. Beats most human players."

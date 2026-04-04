@@ -24,21 +24,21 @@ export default function Hero() {
           href="#experience"
           className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all"
         >
-          View My Work Experience
+          VIEW MY WORK EXPERIENCE
         </a>
 
         <a
           href="#projects"
           className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all"
         >
-          View My Projects
+          VIEW MY PROJECTS
         </a>
 
         <a
           href="#interview"
           className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all"
         >
-          Watch My Interviews
+          WATCH MY INTERVIEWS
         </a>
       </div>
     </section>
