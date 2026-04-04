@@ -170,6 +170,17 @@ export default function Home() {
               </a>
             </li>
             <li>
+              PUTNAM Math Competition 2025 — 2nd in Georgia Tech (#231 Overall):{" "}
+              <a 
+                href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline"
+              >
+                results
+              </a>
+            </li>
+            <li>
               PUTNAM Math Competition 2024 — 1st in Georgia Tech (#126 Overall):{" "}
               <a 
                 href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf"
