@@ -31,8 +31,18 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-blue-700 mb-4">Experience</h2>
           <div className="flex flex-col gap-3">
             <ExperienceCard
-              title="Software Engineer (Jan 2026 - Present)"
-              company="WebDev @GT"
+              title="Software Engineer Intern (May 2026 - Aug 2026)"
+              company="Top Gun Co., Ltd."
+              desc={[
+                "Supporting the development of HR technology platforms that connect job seekers and employers across Thailand."
+              ]}
+              tags={["Typescript"]}
+              img="/topgun.png"
+              link="https://www.linkedin.com/company/jobtopguncompany/"
+            />
+            <ExperienceCard
+              title="Software Engineer (Jan 2026 - May 2026)"
+              company="WebDev @Georgia Tech"
               desc={[
                 "Developing LingoMate, a language learning platform with an interactive AI partner feature."
               ]}
