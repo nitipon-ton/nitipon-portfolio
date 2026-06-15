@@ -34,7 +34,7 @@ export default function Home() {
               title="Software Engineer Intern (May 2026 - Aug 2026)"
               company="Top Gun Co., Ltd."
               desc={[
-                "Supporting the development of HR technology platforms that connect job seekers and employers across Thailand."
+                "Supporting the development of HR technology websites and applications that connect job seekers and employers across Thailand."
               ]}
               tags={["Typescript"]}
               img="/topgun.png"
@@ -114,6 +114,14 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-blue-700 mb-8">Projects</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <ProjectCard
+              title="High-performance Wordle Bot"
+              desc="Suggests optimal Wordle guesses using an expectatimax and minimax algorithm, achieving 3.50 average guesses, a 98% success rate within 4 guesses, and 100% success within 5 guesses."
+              img="/wordle.jpg"
+              link="https://wordle-analyzer-nu.vercel.app/"
+              tags={["Python", "Algorithm", "Minimax", "Simulation", "Probability", "Data Analysis", "HTML/CSS"]}
+            />
+            
             <ProjectCard
               title="DSL: Data Saves Lives (Hacklytics 2026 - 3rd Place for Databricks Challenge)"
               desc="Cleaned and unified humanitarian datasets using SQL and Python, enabling reliable humanitarian crisis analytics"
