@@ -36,7 +36,7 @@ export default function Home() {
               desc={[
                 "Supporting the development of HR technology websites and applications that connect job seekers and employers across Thailand."
               ]}
-              tags={["Typescript"]}
+              tags={["Typescript", "React", "Node.js", "Xcode", "Claude Design", "yarn", "AWS Cognito"]}
               img="/topgun.png"
               link="https://www.linkedin.com/company/jobtopguncompany/"
             />
