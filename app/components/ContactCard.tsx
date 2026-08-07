@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -17,24 +17,25 @@ export default function ContactCard({ title, desc, img, link }: ContactCardProps
       rel="noopener noreferrer"
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ type: "spring", stiffness: 200 }}
-      className="group relative block rounded-2xl overflow-hidden shadow-lg bg-white"
+      className="group relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/90 p-5 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 dark:border-slate-700/80 dark:bg-slate-950/80"
     >
-      {/* Glow border */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 blur-lg transition duration-300"></div>
-
-      {/* Card content */}
-      <div className="relative z-10 rounded-2xl bg-white p-5 flex items-center gap-4">
+      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-sky-400/20 to-cyan-400/15 opacity-0 transition duration-500 group-hover:opacity-100" />
+      <div className="relative z-10 flex items-center gap-4">
         {img && (
           <img
             src={img}
             alt={title}
-            className="w-15 h-15 object-cover rounded-xl"
+            className="h-14 w-14 rounded-2xl object-cover"
           />
         )}
 
         <div>
-          <h3 className="text-2xl font-semibold text-blue-700 mb-2">{title}</h3>
-          <p className="text-gray-700">{desc}</p>
+          <h3 className="text-xl font-semibold text-slate-950 dark:text-white mb-1">
+            {title}
+          </h3>
+          <p className="text-sm text-slate-600 dark:text-slate-300">
+            {desc}
+          </p>
         </div>
       </div>
     </motion.a>

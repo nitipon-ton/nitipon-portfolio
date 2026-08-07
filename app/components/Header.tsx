@@ -1,18 +1,28 @@
+import ThemeToggle from "./ThemeToggle";
+
 export default function Header() {
   return (
-    <header className="w-full py-6 px-8 bg-blue-600 text-white fixed top-0 left-0 z-50 shadow-md">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold tracking-wide">
-          Nitipon (Tony) Trimaitreepituk
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-700/75 dark:bg-slate-950/80">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4 sm:px-8">
+        <div className="space-y-1">
+          <p className="text-sm uppercase tracking-[0.28em] text-slate-500 dark:text-slate-400">
+            Math · Tech · Systems
+          </p>
+          <h1 className="text-lg font-semibold tracking-tight text-slate-950 dark:text-white">
+            Nitipon (Tony) Trimaitreepituk
+          </h1>
         </div>
 
-        <nav className="flex gap-6 text-lg">
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#experience" className="hover:underline">Experience</a>
-          <a href="#projects" className="hover:underline">Projects</a>
-          <a href="#achievements" className="hover:underline">Achievements</a>
-          <a href="#contact" className="hover:underline">Contact</a>
-        </nav>
+        <div className="flex flex-1 items-center justify-end gap-4">
+          <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 dark:text-slate-300 md:flex">
+            <a href="#about" className="hover:text-slate-950 dark:hover:text-white">About</a>
+            <a href="#experience" className="hover:text-slate-950 dark:hover:text-white">Experience</a>
+            <a href="#projects" className="hover:text-slate-950 dark:hover:text-white">Projects</a>
+            <a href="#achievements" className="hover:text-slate-950 dark:hover:text-white">Achievements</a>
+            <a href="#contact" className="hover:text-slate-950 dark:hover:text-white">Contact</a>
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

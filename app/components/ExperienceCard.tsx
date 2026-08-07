@@ -1,7 +1,6 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
 interface ExperienceCardProps {
   title: string;
@@ -25,36 +24,29 @@ export default function ExperienceCard({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ y: -6, scale: 1.01 }}
-      transition={{ type: "spring", stiffness: 200 }}
-      className="group relative block rounded-2xl overflow-hidden shadow-lg bg-white"
+      whileHover={{ y: -8, scale: 1.01 }}
+      transition={{ type: "spring", stiffness: 210, damping: 18 }}
+      className="group relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/90 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 dark:border-slate-700/80 dark:bg-slate-950/80"
     >
-      {/* Glow */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 blur-lg transition duration-300" />
-
-      {/* Card content */}
-      <div className="relative z-10 rounded-2xl bg-white p-6 flex flex-col gap-4">
-        
-        {/* TOP ROW: icon + details */}
+      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-sky-400/20 to-indigo-400/15 opacity-0 transition duration-500 group-hover:opacity-100" />
+      <div className="relative z-10 p-6 sm:p-7">
         <div className="flex gap-4 items-start">
           {img && (
             <img
               src={img}
               alt={title}
-              className="w-16 h-16 object-cover rounded-xl flex-shrink-0"
+              className="h-16 w-16 rounded-2xl object-cover shadow-lg shadow-slate-900/10 dark:shadow-none"
             />
           )}
 
           <div>
-            <h3 className="text-2xl font-semibold text-blue-700 mb-1">
+            <h3 className="text-2xl font-semibold text-slate-950 dark:text-white mb-1">
               {title}
             </h3>
-
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <p className="text-base font-medium text-slate-600 dark:text-slate-300 mb-3">
               {company}
-            </h3>
-
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-slate-600 dark:text-slate-300">
               {desc.map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
@@ -62,12 +54,11 @@ export default function ExperienceCard({
           </div>
         </div>
 
-        {/* BOTTOM ROW: tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           {tags.map((tag, i) => (
             <span
               key={i}
-              className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full"
+              className="badge-pill rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200"
             >
               {tag}
             </span>

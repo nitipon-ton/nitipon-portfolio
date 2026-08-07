@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+﻿import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 import ContactCard from "./components/ContactCard";
@@ -10,32 +10,35 @@ export default function Home() {
       <Header />
       <Hero />
 
-      <main className="px-6 max-w-4xl mx-auto">
-        {/* ABOUT SECTION */}
-        <section id="about" className="mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">About Me</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            I am a third-year Computer Science student at Georgia Institute of Technology, passionate about building innovative software and applying machine learning, algorithms, and data science to solve real-world problems.
-            I thrive in collaborative, fast-paced environments where I can turn complex ideas into impactful solutions.        
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            I'm especially interested in internships and roles in software engineering, machine learning, and quant trader, where I can leverage my technical and Mathematical skills to deliver scalable and impactful products.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            Outside of class, I run a STEM tutoring practice, providing one-on-one lessons to 10+ students per semester, combining my love for Math & Science with a drive to make education more accessible.
-          </p>
+      <main className="px-6 pb-20 pt-10 sm:px-8 lg:px-10">
+        <section id="about" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+          <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-6">
+            About Me
+          </h2>
+          <div className="space-y-6 text-lg leading-8 text-slate-700 dark:text-slate-300">
+            <p>
+              I am a third-year Computer Science student at Georgia Institute of Technology, passionate about building innovative software and applying machine learning, algorithms, and data science to solve real-world problems. I thrive in collaborative, fast-paced environments where I can turn complex ideas into impactful solutions.
+            </p>
+            <p>
+              I'm especially interested in internships and roles in software engineering, machine learning, and quant trader, where I can leverage my technical and Mathematical skills to deliver scalable and impactful products.
+            </p>
+            <p>
+              Outside of class, I run a STEM tutoring practice, providing one-on-one lessons to 10+ students per semester, combining my love for Math & Science with a drive to make education more accessible.
+            </p>
+          </div>
         </section>
 
-        {/* EXPERIENCE SECTION */}
-        <section id="experience" className="mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Experience</h2>
-          <div className="flex flex-col gap-3">
+        <section id="experience" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+          <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-8">
+            Experience
+          </h2>
+          <div className="flex flex-col gap-5">
             <ExperienceCard
               title="Software Engineer Intern (May 2026 - Aug 2026)"
               company="Top Gun Co., Ltd."
               desc={[
                 "Developed both frontend and backend features for Office24, a workplace social media platform, within a large-scale TypeScript monorepo.",
-                "Resolved an AWS Cognito OTP verification bug affecting login retries across web and mobile applications."
+                "Resolved an AWS Cognito OTP verification bug affecting login retries across web and mobile applications.",
               ]}
               tags={["Typescript", "React", "Node.js", "Xcode", "Claude Design", "yarn", "AWS Cognito"]}
               img="/topgun.png"
@@ -45,7 +48,7 @@ export default function Home() {
               title="Software Engineer (Jan 2026 - May 2026)"
               company="WebDev @Georgia Tech"
               desc={[
-                "Developing LingoMate, a language learning platform with an interactive AI partner feature."
+                "Developing LingoMate, a language learning platform with an interactive AI partner feature.",
               ]}
               tags={["Typescript", "Express.js", "React", "Node.js"]}
               img="/gtwebdev.jpg"
@@ -57,7 +60,7 @@ export default function Home() {
               desc={[
                 "Built a framework to auto-generate tools from OpenAPI specs, reducing backend effort and improving scalability.",
                 "Simplified tool development by eliminating redundant code and enabling broader usability.",
-                "Worked with TypeScript, Vue.js, and DocumentDB to make tools accessible directly through the UI of the company chatbot."
+                "Worked with TypeScript, Vue.js, and DocumentDB to make tools accessible directly through the UI of the company chatbot.",
               ]}
               tags={["Typescript", "SQL", "Vue.js", "LangChain", "OpenAPI", "Java", "Postman", "DocumentDB"]}
               img="/coda.jpg"
@@ -69,7 +72,7 @@ export default function Home() {
               desc={[
                 "Managed a profitable tutoring business with a client base of over 10 students per semester across subjects like Mathematics, Physics, Computer Science, Chemistry, Earth Science, and Astronomy.",
                 "Received multiple partnership offers from online learning platforms, selectively accepting collaborations that aligned with my tutoring goals while negotiating terms to maximize value.",
-                "Developed customized lesson plans and utilized LaTeX, Python, and online advertising strategies to enhance learning experiences and student engagement."
+                "Developed customized lesson plans and utilized LaTeX, Python, and online advertising strategies to enhance learning experiences and student engagement.",
               ]}
               tags={["Mathematics", "Python", "LaTeX", "Physics", "Chemistry", "Earth Science", "Astronomy", "Marketing"]}
               img="/face.jpg"
@@ -80,7 +83,7 @@ export default function Home() {
               company="Thammasat Secondary School (TSS)"
               desc={[
                 "Taught pre-college Physics through weekly lectures and assignments to prepare students for university-level science.",
-                "Wrote detailed progress reports for each student to the school administration, ensuring tailored academic support."
+                "Wrote detailed progress reports for each student to the school administration, ensuring tailored academic support.",
               ]}
               tags={["Physics", "Mathematics"]}
               img="/TSS.jpg"
@@ -91,7 +94,7 @@ export default function Home() {
               company="Association of Thai Students in the United States (ATSA)"
               desc={[
                 "Provided technical support for live events and organizational projects, resolving issues in real time.",
-                "Helped improve the digital infrastructure of the Association of Thai Students in the U.S."
+                "Helped improve the digital infrastructure of the Association of Thai Students in the U.S.",
               ]}
               tags={["Technical Support", "Event Management", "IT"]}
               img="/ATSA.png"
@@ -101,7 +104,7 @@ export default function Home() {
               title="Mathematics Tutor (Jul 2023 - Oct 2023)"
               company="Monkey Everyday"
               desc={[
-                "Designed and delivered a Mathematics crash course focused on preparing students for the King's Scholarship (a Thai government full scholarhip) Exam within 20 hours."
+                "Designed and delivered a Mathematics crash course focused on preparing students for the King's Scholarship (a Thai government full scholarhip) Exam within 20 hours.",
               ]}
               tags={["Mathematics", "LaTeX", "Curriculum Design", "Public Speaking"]}
               img="/monkey.jpg"
@@ -110,11 +113,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PROJECTS SECTION */}
-        <section id="projects" className="mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-8">Projects</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <section id="projects" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+          <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-8">
+            Projects
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2">
             <ProjectCard
               title="High-performance Wordle Bot"
               desc="Suggests optimal Wordle guesses using an expectimax and minimax algorithm, achieving 3.50 average guesses, a 98% success rate within 4 guesses, and 100% success within 5 guesses."
@@ -122,7 +125,6 @@ export default function Home() {
               link="https://wordle-analyzer-nu.vercel.app/"
               tags={["Python", "Algorithm", "Minimax", "Simulation", "Probability", "Data Analysis", "HTML/CSS"]}
             />
-            
             <ProjectCard
               title="DSL: Data Saves Lives (Hacklytics 2026 - 3rd Place for Databricks Challenge)"
               desc="Cleaned and unified humanitarian datasets using SQL and Python, enabling reliable humanitarian crisis analytics"
@@ -130,7 +132,6 @@ export default function Home() {
               link="https://devpost.com/software/data-saves-lives-dsl"
               tags={["Python", "SQL", "Databricks", "Javascript"]}
             />
-
             <ProjectCard
               title="Credit Card fraud detection"
               desc="Using machine learning algorithms to identify and prevent fraudulent credit card transactions."
@@ -138,7 +139,6 @@ export default function Home() {
               link="https://github.gatech.edu/pages/ntrimait3/Machine-Learning-4641-Group-9/"
               tags={["Python", "Random Forest", "Logistic Regression", "Neural Networks"]}
             />
-
             <ProjectCard
               title="FPL Soccer Intelligence"
               desc="A web app that provides data-driven insights and predictions for Fantasy Premier League using player stats and interactive visualizations."
@@ -146,7 +146,6 @@ export default function Home() {
               link="https://devfolio.co/projects/fpl-soccer-intelligence-a702"
               tags={["Python", "Tableau", "HTML/CSS", "Streamlit", "GPT Builder"]}
             />
-
             <ProjectCard
               title="GreenWise"
               desc="A chrome extension that allows customers to quickly assess the carbon impact of their online shopping."
@@ -154,7 +153,6 @@ export default function Home() {
               link="https://devpost.com/software/greenwise-pwzv6u"
               tags={["beautiful-soup", "Flask", "JavaScript", "json", "numpy", "pandas", "python", "scikit-learn", "figma", "HTML/CSS", "jupyter-notebook"]}
             />
-
             <ProjectCard
               title="Yahtzee Bot"
               desc="A probability-optimized Yahtzee engine using probability, dynamic simulations, and strategy heuristics. Beats most human players."
@@ -162,7 +160,6 @@ export default function Home() {
               link="https://yahtzee-production.up.railway.app/health"
               tags={["Java", "Math", "Simulation", "Probability", "CSS", "HTML"]}
             />
-
             <ProjectCard
               title="Portfolio Website"
               desc="Aesthetic, animated Next.js portfolio built from scratch with Framer Motion, Tailwind CSS, and responsive design."
@@ -173,13 +170,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ACHIEVEMENTS SECTION */}
-        <section id="achievements" className="mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Achievements</h2>
-          <ul className="list-disc pl-6 text-gray-700 text-lg space-y-2">
+        <section id="achievements" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+          <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-6">
+            Achievements
+          </h2>
+          <ul className="list-disc space-y-4 text-lg leading-8 text-slate-700 dark:text-slate-300 pl-6">
             <li>
               ICMT 2026 Division B — 8th place Individual, 5th place Constellation Round:{" "}
-              <a 
+              <a
                 href="https://intercollegiatemathtournament.org/archives/2026/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -190,7 +188,7 @@ export default function Home() {
             </li>
             <li>
               PUTNAM Math Competition 2025 — 2nd in Georgia Tech (#231 Overall):{" "}
-              <a 
+              <a
                 href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -201,7 +199,7 @@ export default function Home() {
             </li>
             <li>
               PUTNAM Math Competition 2024 — 1st in Georgia Tech (#126 Overall):{" "}
-              <a 
+              <a
                 href="https://kskedlaya.org/putnam-archive/AnnouncementOfWinners2024.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -213,7 +211,7 @@ export default function Home() {
             <li>King's Scholarship 2022 (Full Undergraduate Government Scholarship) (#1 in Thailand)</li>
             <li>
               International Earth Science Olympiad 2021 — Silver Medal:{" "}
-              <a 
+              <a
                 href="https://www.igeoscied.org/wp-content/uploads/2022/11/2021-DMT_TOTAL-DISTINCTION-RANKING-IESO.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -224,7 +222,7 @@ export default function Home() {
             </li>
             <li>
               Thailand Earth Science Olympiad 2021 — Gold Medal, Top Scorer in Theory, Practical, and Overall:{" "}
-              <a 
+              <a
                 href="https://teso2021.mahidol.ac.th/medals.php"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -232,7 +230,7 @@ export default function Home() {
               >
                 results
               </a>
-              <a 
+              <a
                 href="https://www.youtube.com/watch?v=Nf3iNb-cXEk"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -243,19 +241,8 @@ export default function Home() {
             </li>
             <li>
               International Teenagers Mathematics Olympiad 2019 — Gold Medal:{" "}
-              <a 
+              <a
                 href="http://files.chiuchang.org.tw:8080/MyWeb/download/docu/ITMO%202019%20invitation.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold underline mr-3"
-              >
-                about
-              </a>
-            </li>
-            <li>
-              Bulgaria International Mathematics Competition 2018 — Silver Medal:{" "}
-              <a 
-                href="https://chiuchang.org/imc/en/2018/07/24/bimc-2018-results-2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold underline mr-3"
@@ -263,15 +250,26 @@ export default function Home() {
                 results
               </a>
             </li>
-
+            <li>
+              Bulgaria International Mathematics Competition 2018 — Silver Medal:{" "}
+              <a
+                href="https://chiuchang.org/imc/en/2018/07/24/bimc-2018-results-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline"
+              >
+                results
+              </a>
+            </li>
           </ul>
         </section>
 
-        {/* INTERVIEW SECTION */}
-        <section id="interview" className="mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Interviews</h2>
+        <section id="interview" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+          <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-8">
+            Interviews
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid gap-8 md:grid-cols-2">
             <ProjectCard
               title="OnDemand Interview (2022)"
               desc="A video interview focusing on my achievements in Math and Science National Admissions Exams."
@@ -279,7 +277,6 @@ export default function Home() {
               link="https://www.youtube.com/watch?v=FBTvc63f00A"
               tags={["OnDemand", "Math", "Science", "Youtube"]}
             />
-
             <ProjectCard
               title="AtHome Interview (2022)"
               desc="A video interview focusing on my experiences and achievements in Math and Science Competitions before university."
@@ -287,7 +284,6 @@ export default function Home() {
               link="https://www.youtube.com/watch?v=ioI1tvJzJIQ"
               tags={["AtHome", "Math", "Science", "Youtube"]}
             />
-
             <ProjectCard
               title="Woody TV Interview (2016)"
               desc="A TV interview with Woody focusing on my latest achievements at IMSO 2016."
@@ -298,10 +294,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CONTACT SECTION */}
-        <section id="contact" className="mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Contact</h2>
-          <div className="flex flex-col gap-3">
+        <section id="contact" className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+          <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-6">
+            Contact
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2">
             <ContactCard
               title="GitHub"
               desc="nitipon-ton"

@@ -1,7 +1,6 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -17,34 +16,34 @@ export default function ProjectCard({ title, desc, tags, img, link }: ProjectCar
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ y: -8, scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 200 }}
-      className="group relative block rounded-2xl overflow-hidden shadow-lg bg-white"
+      whileHover={{ y: -10, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 210, damping: 18 }}
+      className="group relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/90 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 dark:border-slate-700/80 dark:bg-slate-950/80"
     >
-      {/* Glow border */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 blur-lg transition duration-300"></div>
-
-      {/* Card content */}
-      <div className="relative z-10 rounded-2xl bg-white p-5">
+      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-sky-400/25 to-indigo-400/15 opacity-0 transition duration-500 group-hover:opacity-100" />
+      <div className="relative z-10 p-5 sm:p-6">
         {img && (
           <img
             src={img}
             alt={title}
-            className="w-full h-60 object-cover rounded-xl mb-4"
+            className="mb-5 h-60 w-full rounded-[1.5rem] object-cover transition duration-500 group-hover:scale-105"
           />
         )}
 
-        <h3 className="text-2xl font-semibold text-blue-700 mb-2">{title}</h3>
-        <p className="text-gray-700 mb-4">{desc}</p>
+        <h3 className="text-2xl font-semibold text-slate-950 dark:text-white mb-3">
+          {title}
+        </h3>
+        <p className="text-base leading-7 text-slate-600 dark:text-slate-300 mb-5">
+          {desc}
+        </p>
 
-        {/* Tag chips */}
         <div className="flex flex-wrap gap-2">
-          {tags.map((t: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, i: Key | null | undefined) => (
+          {tags.map((tag, index) => (
             <span
-              key={i}
-              className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full"
+              key={index}
+              className="badge-pill px-3 py-1.5 text-sm font-medium text-slate-800 bg-slate-100 dark:bg-slate-800 dark:text-slate-200"
             >
-              {t}
+              {tag}
             </span>
           ))}
         </div>
