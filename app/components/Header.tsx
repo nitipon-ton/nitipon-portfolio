@@ -6,7 +6,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4 sm:px-8">
         <div className="space-y-1">
           <p className="text-sm uppercase tracking-[0.28em] text-slate-500 dark:text-slate-400">
-            Math · Tech · Systems
+            Math · Tech · Finance
           </p>
           <h1 className="text-lg font-semibold tracking-tight text-slate-950 dark:text-white">
             Nitipon (Tony) Trimaitreepituk

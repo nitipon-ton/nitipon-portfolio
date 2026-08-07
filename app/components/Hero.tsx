@@ -19,9 +19,9 @@
 
         <div className="max-w-2xl space-y-6">
           <div className="inline-flex items-center gap-3 rounded-full border border-slate-200/90 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm dark:border-slate-700/90 dark:bg-slate-900/90 dark:text-slate-200">
-            <span className="font-semibold">Math + Tech</span>
+            <span className="font-semibold">Math + Tech + Finance</span>
             <span className="h-1.5 w-1.5 rounded-full bg-sky-500 shadow-lg shadow-sky-500/20" />
-            Systems, Data, Algorithms
+            Quantitative Analysis, Financial Modeling, Algorithmic Trading
           </div>
 
           <div className="space-y-4">
@@ -29,7 +29,7 @@
               Building elegant systems where math, algorithms, and product drive impact.
             </h1>
             <p className="max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-              Third-year Georgia Tech CS student with experience in software engineering, machine learning, quant-style problem solving, and technical mentorship.
+              Fourth-year Georgia Tech CS student with experience in software engineering, machine learning, quant-style problem solving, and technical mentorship.
             </p>
           </div>
 
