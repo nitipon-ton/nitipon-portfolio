@@ -34,7 +34,8 @@ export default function Home() {
               title="Software Engineer Intern (May 2026 - Aug 2026)"
               company="Top Gun Co., Ltd."
               desc={[
-                "Supporting the development of HR technology websites and applications that connect job seekers and employers across Thailand."
+                "Developed both frontend and backend features for Office24, a workplace social media platform, within a large-scale TypeScript monorepo.",
+                "Resolved an AWS Cognito OTP verification bug affecting login retries across web and mobile applications."
               ]}
               tags={["Typescript", "React", "Node.js", "Xcode", "Claude Design", "yarn", "AWS Cognito"]}
               img="/topgun.png"
