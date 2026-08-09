@@ -157,7 +157,7 @@ export default function Home() {
               title="Yahtzee Bot"
               desc="A probability-optimized Yahtzee engine using probability, dynamic simulations, and strategy heuristics. Beats most human players."
               img="/yahtzee.jpg"
-              link="https://yahtzee-production.up.railway.app/health"
+              link="https://yahtzee-tony.vercel.app/"
               tags={["Java", "Math", "Simulation", "Probability", "CSS", "HTML"]}
             />
             <ProjectCard
