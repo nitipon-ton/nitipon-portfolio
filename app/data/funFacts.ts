@@ -118,7 +118,7 @@ export const FUN_FACTS: FunFact[] = [
   },
   {
     title: "Bulgaria, 2018",
-    fact: "Silver Medal at the Bulgaria International Mathematics Competition — an early taste of international math.",
+    fact: "Silver Medal at the Bulgaria International Mathematics Competition — first time in Europe.",
     link: { label: "Official results", href: "https://chiuchang.org/imc/en/2018/07/24/bimc-2018-results-2/" },
   },
   {

@@ -2,7 +2,9 @@
 
 /* Class-based dark variant. `halloween` piggybacks on it so every existing
    `dark:` utility keeps working, then gets re-tinted by the palette below. */
-@custom-variant dark (&:where(.dark, .dark *, .halloween, .halloween *));
+@custom-variant dark (
+  &:where(.dark, .dark *, .halloween, .halloween *, .space, .space *, .christmas, .christmas *)
+);
 
 :root {
   color-scheme: light;
@@ -53,37 +55,46 @@
 }
 
 /* ---------------------------------------------------------------
-   Christmas — light based (Tailwind `dark:` utilities stay off),
-   slate warmed slightly and the sky accent turned evergreen.
+   Christmas — dark based, so it joins the `@custom-variant dark`
+   line at the top. A deep evergreen night: the snow, the warm
+   window-light red and the gold on the tree all need darkness to
+   read as Christmas rather than as a greetings card.
    --------------------------------------------------------------- */
 .christmas {
-  color-scheme: light;
-  --background: #f8fbf9;
-  --surface: rgba(255, 255, 255, 0.88);
-  --surface-strong: rgba(255, 255, 255, 0.96);
-  --foreground: #14261c;
-  --muted: #4b5d52;
-  --border: rgba(20, 83, 45, 0.14);
-  --glow: rgba(220, 38, 38, 0.15);
-  --accent: #b91c1c;
-  --accent-soft: #15803d;
+  color-scheme: dark;
+  --background: #050f0c;
+  --surface: rgba(10, 28, 23, 0.86);
+  --surface-strong: rgba(10, 28, 23, 0.95);
+  --foreground: #eef7f1;
+  --muted: #9db8ab;
+  --border: rgba(248, 113, 113, 0.2);
+  --glow: rgba(248, 113, 113, 0.18);
+  --accent: #f87171;
+  --accent-soft: #fbbf24;
 
-  --bg-mid: rgba(246, 251, 248, 0.94);
-  --bg-glow-a: rgba(220, 38, 38, 0.16);
-  --bg-glow-b: rgba(21, 128, 61, 0.14);
-  --grid-line: rgba(255, 255, 255, 0.06);
-  --selection: rgba(220, 38, 38, 0.28);
+  --bg-mid: rgba(6, 19, 15, 0.94);
+  --bg-glow-a: rgba(220, 38, 38, 0.18);
+  --bg-glow-b: rgba(21, 128, 61, 0.2);
+  --grid-line: rgba(226, 232, 240, 0.05);
+  --selection: rgba(220, 38, 38, 0.35);
 
-  --particle-opacity: 0.75;
+  --particle-opacity: 0.9;
 
-  --color-sky-400: #22c55e;
-  --color-sky-500: #16a34a;
-  --color-sky-600: #15803d;
-  --color-sky-700: #14532d;
-  --color-slate-50: #fbfaf8;
-  --color-slate-100: #f4f6f3;
-  --color-slate-200: #e3e9e4;
-  --color-slate-300: #cbd6ce;
+  --color-slate-50: #f2faf5;
+  --color-slate-100: #e4f2e9;
+  --color-slate-200: #cfe4d7;
+  --color-slate-300: #aecdb9;
+  --color-slate-400: #86a894;
+  --color-slate-500: #628172;
+  --color-slate-600: #456254;
+  --color-slate-700: #2c4438;
+  --color-slate-800: #1c3128;
+  --color-slate-900: #12231c;
+  --color-slate-950: #0a1712;
+  --color-sky-400: #f87171;
+  --color-sky-500: #ef4444;
+  --color-sky-600: #dc2626;
+  --color-sky-700: #b91c1c;
 }
 
 /* ---------------------------------------------------------------
@@ -162,7 +173,8 @@
 
 /* ---------------------------------------------------------------
    Easter — light based pastel. The background field here is
-   interactive, so it sits above the content (see .season-bg--easter).
+   collectibles are interactive, so they sit above the content on their
+   own layer (see .season-bg--collect).
    --------------------------------------------------------------- */
 .easter {
   color-scheme: light;
@@ -192,6 +204,85 @@
   --color-slate-100: #f7f1fb;
   --color-slate-200: #ece1f4;
   --color-slate-300: #d8c8e6;
+}
+
+/* ---------------------------------------------------------------
+   Summer — light based. Warm sand paper, ocean-teal accent and a
+   sun-gold highlight, so the heading rule reads sea → sunset.
+   --------------------------------------------------------------- */
+.summer {
+  color-scheme: light;
+  --background: #fffbf2;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --foreground: #123240;
+  --muted: #4a6b76;
+  --border: rgba(13, 148, 136, 0.16);
+  --glow: rgba(251, 191, 36, 0.18);
+  --accent: #0d9488;
+  --accent-soft: #f59e0b;
+
+  --bg-mid: rgba(255, 247, 233, 0.94);
+  --bg-glow-a: rgba(251, 191, 36, 0.2);
+  --bg-glow-b: rgba(45, 212, 191, 0.16);
+  --grid-line: rgba(255, 255, 255, 0.06);
+  --selection: rgba(20, 184, 166, 0.28);
+
+  --particle-opacity: 0.85;
+
+  --color-sky-400: #2dd4bf;
+  --color-sky-500: #14b8a6;
+  --color-sky-600: #0d9488;
+  --color-sky-700: #0f766e;
+  --color-slate-50: #fffdf7;
+  --color-slate-100: #fff7e8;
+  --color-slate-200: #f7ead2;
+  --color-slate-300: #e6d5b8;
+}
+
+/* ---------------------------------------------------------------
+   Space — dark based, so it joins the `@custom-variant dark` line
+   at the top and inherits every `dark:` utility before re-tinting.
+   Deep-space void, cyan instrument light, violet nebula. The grid
+   is pushed brighter than the other themes so it reads as a HUD.
+   --------------------------------------------------------------- */
+.space {
+  color-scheme: dark;
+  --background: #03040e;
+  --surface: rgba(13, 17, 44, 0.82);
+  --surface-strong: rgba(13, 17, 44, 0.94);
+  --foreground: #dbe7ff;
+  --muted: #8aa0c9;
+  --border: rgba(34, 211, 238, 0.22);
+  --glow: rgba(34, 211, 238, 0.2);
+  --accent: #22d3ee;
+  --accent-soft: #a855f7;
+
+  --bg-mid: rgba(9, 7, 32, 0.94);
+  --bg-glow-a: rgba(168, 85, 247, 0.22);
+  --bg-glow-b: rgba(34, 211, 238, 0.18);
+  --grid-line: rgba(34, 211, 238, 0.07);
+  --selection: rgba(34, 211, 238, 0.35);
+
+  --particle-ink: rgba(103, 232, 249, 0.5);
+  --particle-glow: rgba(34, 211, 238, 0.28);
+  --particle-opacity: 0.9;
+
+  --color-slate-50: #f0f6ff;
+  --color-slate-100: #e2ecff;
+  --color-slate-200: #c9dcff;
+  --color-slate-300: #a5c0ee;
+  --color-slate-400: #8aa0c9;
+  --color-slate-500: #6478a6;
+  --color-slate-600: #45527d;
+  --color-slate-700: #2b3560;
+  --color-slate-800: #1a2047;
+  --color-slate-900: #0f1333;
+  --color-slate-950: #080a22;
+  --color-sky-400: #67e8f9;
+  --color-sky-500: #22d3ee;
+  --color-sky-600: #06b6d4;
+  --color-sky-700: #0891b2;
 }
 
 @theme inline {
@@ -225,6 +316,87 @@ body::before {
   opacity: 0.3;
   pointer-events: none;
   z-index: -2;
+}
+
+/* Space only: a nebula wheeling behind everything. Deliberately one big
+   composited layer animating nothing but `transform`, and inset well past
+   the viewport so the gradient edges never rotate into view. */
+.space body::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  background: radial-gradient(closest-side at 32% 34%, rgba(168, 85, 247, 0.2), transparent 70%),
+    radial-gradient(closest-side at 68% 62%, rgba(34, 211, 238, 0.16), transparent 70%),
+    radial-gradient(closest-side at 54% 18%, rgba(236, 72, 153, 0.12), transparent 70%),
+    radial-gradient(closest-side at 22% 76%, rgba(59, 130, 246, 0.14), transparent 70%);
+  pointer-events: none;
+  z-index: -3;
+  animation: space-nebula 120s linear infinite;
+}
+
+/* The Milky Way, on the <html> element's own pseudo so it can sit under
+   the nebula. Everything — the glow, the dust lanes and the tiled star
+   grains — lives on ONE rotated layer and is confined to the band by a
+   single mask, so the grains can never drift out of alignment with the
+   glow the way separately-positioned DOM stars would.
+
+   Static on purpose: it's the fixed backdrop the nebula wheels behind. */
+.space::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  transform: rotate(-21deg);
+  pointer-events: none;
+  z-index: -4;
+  background:
+    /* dark rift splitting the core, painted first so it sits on top */
+    linear-gradient(
+      to bottom,
+      transparent 45%,
+      rgba(3, 4, 14, 0.62) 49.5%,
+      rgba(3, 4, 14, 0.62) 50.5%,
+      transparent 55%
+    ),
+    /* star grains, tiled — cheap density the DOM stars can't give */
+      radial-gradient(1.4px 1.4px at 12% 24%, rgba(255, 255, 255, 0.95), transparent),
+    radial-gradient(1.1px 1.1px at 47% 61%, rgba(226, 232, 255, 0.85), transparent),
+    radial-gradient(1.6px 1.6px at 78% 33%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 29% 78%, rgba(191, 219, 254, 0.8), transparent),
+    radial-gradient(1.3px 1.3px at 63% 12%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(1px 1px at 88% 71%, rgba(216, 180, 254, 0.8), transparent),
+    radial-gradient(1.5px 1.5px at 6% 55%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 39% 41%, rgba(226, 232, 255, 0.7), transparent),
+    radial-gradient(1.2px 1.2px at 71% 88%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(1px 1px at 55% 29%, rgba(165, 243, 252, 0.7), transparent),
+    /* brightness modulated along the band so it isn't a flat stripe */
+      radial-gradient(ellipse 34% 60% at 18% 50%, rgba(147, 197, 253, 0.22), transparent 72%),
+    radial-gradient(ellipse 30% 70% at 52% 50%, rgba(233, 238, 255, 0.3), transparent 72%),
+    radial-gradient(ellipse 32% 55% at 84% 50%, rgba(192, 132, 252, 0.22), transparent 72%),
+    /* the band itself */
+      linear-gradient(
+        to bottom,
+        transparent 34%,
+        rgba(148, 163, 220, 0.13) 42%,
+        rgba(203, 213, 255, 0.22) 47%,
+        rgba(240, 244, 255, 0.29) 50%,
+        rgba(203, 213, 255, 0.22) 53%,
+        rgba(148, 163, 220, 0.13) 58%,
+        transparent 66%
+      );
+  /* One size per background layer: the rift and the four band gradients span
+     the element, the ten grain layers tile. Tighter tiles = denser dust. */
+  background-size: 100% 100%, 210px 160px, 190px 150px, 230px 170px, 200px 145px, 175px 165px,
+    215px 155px, 185px 140px, 205px 175px, 225px 150px, 195px 160px, 100% 100%, 100% 100%,
+    100% 100%, 100% 100%;
+  /* Confines the grains to the band, so dust never appears in empty sky. */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 32%,
+    #000 45%,
+    #000 55%,
+    transparent 68%
+  );
+  mask-image: linear-gradient(to bottom, transparent 32%, #000 45%, #000 55%, transparent 68%);
 }
 
 * {
@@ -344,6 +516,197 @@ a {
   animation: season-rise var(--dur) linear var(--delay) infinite;
 }
 
+/* --- Space ----------------------------------------------------
+   No emoji here: stars, instrument readouts and geometry only. The
+   twinkle keyframes re-apply the `--o × --particle-opacity` product
+   themselves, since animating opacity overrides the base rule. */
+.season-star {
+  font-size: var(--s);
+  color: #eaf6ff;
+  text-shadow: 0 0 6px rgba(103, 232, 249, 0.9), 0 0 14px rgba(34, 211, 238, 0.55);
+  animation: season-twinkle var(--dur) ease-in-out var(--delay) infinite;
+}
+
+/* Telemetry readouts — small caps monospace, like a HUD margin. */
+.season-hud {
+  font-family: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
+  font-size: var(--s);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(103, 232, 249, 0.72);
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.45);
+  animation: season-drift var(--dur) ease-in-out var(--delay) infinite alternate;
+}
+
+/* Geometric glyphs that drift out and back while rotating. */
+.season-signal {
+  font-size: var(--s);
+  color: rgba(203, 152, 255, 0.85);
+  text-shadow: 0 0 18px rgba(168, 85, 247, 0.75), 0 0 40px rgba(124, 58, 237, 0.4);
+  animation: season-orbit var(--dur) linear var(--delay) infinite;
+}
+
+/* Moving finds (comets, rockets, snowfall) ride above the content — behind
+   it they'd be hidden under the cards for most of the crossing. The layer is
+   click-through, and sits below the fixed header at z-50 so it can never
+   steal a nav click. */
+.season-bg--sky {
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* Easter's layer is the odd one out: as tall as the DOCUMENT rather than the
+   viewport, so its eggs spread down the whole page and you scroll to find
+   them. `position: absolute` (not fixed) is what makes it scroll with the
+   page; the height itself is measured in JS and set inline, since CSS has no
+   "height of the document" length. */
+.season-scatter {
+  --scatter-top: 8rem;
+  position: absolute;
+  top: var(--scatter-top);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 30;
+}
+
+/* Starting below the header matters here: an egg in the document's top 8rem
+   sits under the fixed header at every scroll position you can reach. */
+@media (max-width: 767px) {
+  .season-scatter {
+    --scatter-top: 9rem;
+  }
+}
+
+/* Comets are drawn entirely in CSS — the button holds no character, so
+   `--s` is a trail length here rather than a font size. The button is a
+   20px band because the visible streak is 2px tall: nobody can click a
+   2px moving line. The trail itself lives in ::before, centred in it. */
+.season-comet {
+  top: var(--y);
+  width: var(--s);
+  height: 20px;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  /* Opts back in through the layer's `pointer-events: none`. Safe to leave
+     on permanently only because of how the keyframes are timed — see them. */
+  pointer-events: auto;
+  animation: season-comet var(--dur) linear var(--delay) infinite;
+}
+
+.season-comet::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(103, 232, 249, 0.15) 40%, #ffffff);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.9);
+  transition: height 0.15s ease, box-shadow 0.15s ease;
+}
+
+.season-comet:hover::before,
+.season-comet:focus-visible::before {
+  height: 3px;
+  box-shadow: 0 0 18px rgba(103, 232, 249, 1), 0 0 42px rgba(34, 211, 238, 0.8);
+}
+
+.season-comet:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+/* Shared shell for every catchable item that moves. The padding IS the hit
+   area — a single glyph is only a ~20px target, which is not enough for
+   something drifting under the cursor.
+
+   Note what's absent: `scale`. Growing a moving target makes the pointer fall
+   in and out of its own grown hover box, and the item flickers. These light up
+   instead, which changes no geometry. */
+.season-catch {
+  appearance: none;
+  border: 0;
+  padding: 7px;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+  line-height: 1;
+  font-size: var(--s);
+  transition: filter 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.season-catch:hover,
+.season-catch:focus-visible {
+  filter: brightness(1.2) drop-shadow(0 0 12px var(--accent));
+}
+
+.season-catch:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Christmas — snowflakes, falling. No opacity animation, so unlike the comets
+   there is never a moment where an invisible one is on-screen catching clicks:
+   the fall itself carries them off both ends. */
+.season-snowfall {
+  top: 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(148, 197, 255, 0.9);
+  animation: season-fall var(--dur) linear var(--delay) infinite;
+}
+
+.season-snowfall:hover,
+.season-snowfall:focus-visible {
+  text-shadow: 0 0 12px #ffffff, 0 0 26px rgba(148, 197, 255, 1);
+}
+
+/* Valentine — hearts and love letters, falling the same way. */
+.season-loveletter {
+  top: 0;
+  filter: drop-shadow(0 3px 10px rgba(190, 18, 60, 0.35));
+  animation: season-fall var(--dur) linear var(--delay) infinite;
+}
+
+/* Summer — bubbles, rising, matching the decorative ones. `season-rise` also
+   starts and ends off-screen, so the same click-safety applies. */
+.season-bubblecatch {
+  top: 100%;
+  color: rgba(13, 148, 136, 0.75);
+  text-shadow: 0 0 12px rgba(45, 212, 191, 0.85);
+  animation: season-rise var(--dur) linear var(--delay) infinite;
+}
+
+.season-bubblecatch:hover,
+.season-bubblecatch:focus-visible {
+  color: rgba(13, 148, 136, 1);
+  text-shadow: 0 0 16px rgba(45, 212, 191, 1);
+}
+
+/* Halloween — spooks crossing on a lurching path. */
+.season-swoop {
+  top: var(--y);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+  animation: season-swoop var(--dur) ease-in-out var(--delay) infinite;
+}
+
+/* Sea bubbles share the hearts' upward path, tinted for the water. */
+.season-bubble {
+  top: 100%;
+  font-size: var(--s);
+  color: rgba(13, 148, 136, 0.55);
+  text-shadow: 0 0 10px rgba(45, 212, 191, 0.7);
+  animation: season-rise var(--dur) linear var(--delay) infinite;
+}
+
 .season-snow {
   top: 0;
   color: #ffffff;
@@ -352,25 +715,25 @@ a {
   animation: season-fall var(--dur) linear var(--delay) infinite;
 }
 
-/* Easter eggs are clickable, so this layer sits ABOVE the content
-   instead of behind it. The container stays click-through; only the
-   eggs themselves catch pointer events. */
-.season-bg--easter {
+/* Collectibles are clickable, so this layer sits ABOVE the content instead
+   of behind it — an item behind the content can't be clicked at all. The
+   container stays click-through; only the items catch pointer events. */
+.season-bg--collect {
   z-index: 30;
   /* The fixed header sits at z-50 and would swallow these clicks. Because this
-     layer is itself fixed, any egg landing under the header is unreachable
-     forever — so the field starts below it. */
+     layer is itself fixed, anything landing under the header is unreachable
+     forever — so the layer starts below it. */
   inset: 7rem 0 0 0;
 }
 
 /* The header title wraps to two lines on narrow screens, making it taller. */
 @media (max-width: 767px) {
-  .season-bg--easter {
+  .season-bg--collect {
     inset: 9rem 0 0 0;
   }
 }
 
-.season-egg {
+.season-collect {
   pointer-events: auto;
   cursor: pointer;
   appearance: none;
@@ -378,29 +741,56 @@ a {
   padding: 0;
   background: none;
   font-size: var(--s);
-  filter: drop-shadow(0 4px 10px rgba(88, 28, 135, 0.22));
+  /* Themed rather than fixed purple: these now appear in every seasonal
+     theme, so the halo follows whichever palette is active. */
+  filter: drop-shadow(0 4px 10px var(--glow));
   animation: season-drift var(--dur) ease-in-out var(--delay) infinite alternate;
   /* `scale` is its own property, so hover feedback composes with the
      `transform` the keyframes are driving instead of fighting it. */
   transition: scale 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
 }
 
-.season-bg .season-egg:hover,
-.season-bg .season-egg:focus-visible {
-  opacity: 1;
-  scale: 1.3;
-  filter: drop-shadow(0 6px 16px rgba(219, 39, 119, 0.45));
+/* The painted eggs are SVG, so `--s` is a width here rather than a font size. */
+.season-collect--egg {
+  width: var(--s);
+  height: auto;
+  font-size: 0;
+  line-height: 0;
 }
 
-.season-bg .season-egg:focus-visible {
+/* Sizing lives here, not on the <svg> element: `height="auto"` is a valid CSS
+   value but NOT a valid SVG attribute, and setting it there is a parse error. */
+.season-collect--egg svg,
+.egg-mark {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The painted egg used inline in the fact card, where a 🥚 would otherwise be. */
+.egg-mark {
+  width: 1em;
+  display: inline-block;
+  vertical-align: -0.15em;
+}
+
+/* Not scoped to `.season-bg`: Easter's eggs live on `.season-scatter`. */
+.season-collect:hover,
+.season-collect:focus-visible {
+  opacity: 1;
+  scale: 1.3;
+  filter: drop-shadow(0 6px 16px var(--accent));
+}
+
+.season-collect:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 6px;
   border-radius: 8px;
 }
 
-.season-bg .season-egg--found {
+.season-collect.season-collect--found {
   opacity: calc(var(--o) * 0.4);
-  filter: grayscale(0.55) drop-shadow(0 2px 6px rgba(88, 28, 135, 0.15));
+  filter: grayscale(0.55) drop-shadow(0 2px 6px var(--glow));
 }
 
 @keyframes season-drift {
@@ -421,6 +811,113 @@ a {
   }
   100% {
     transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* Brightness only — no scale, so a star is a fixed point of light rather than
+   something that pulses in size and reads as movement. */
+@keyframes season-twinkle {
+  0%,
+  100% {
+    opacity: calc(var(--o) * var(--particle-opacity) * 0.22);
+  }
+  50% {
+    opacity: calc(var(--o) * var(--particle-opacity));
+  }
+}
+
+/* Drifts out and back while rotating a full turn, so it never snaps. */
+@keyframes season-orbit {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(var(--dx), var(--dy), 0) rotate(180deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(360deg);
+  }
+}
+
+/* `--r0` tilts the trail to match the path it travels.
+
+   The fades are timed to finish while the comet is still OFF-SCREEN, which is
+   what makes it safe to leave permanently clickable: "on screen" and "fully
+   opaque" become the same interval, so it can never sit invisible over the
+   page swallowing clicks meant for the content. That is the whole reason the
+   comet carries a plain static `pointer-events: auto` instead of trying to
+   animate it — which would mean relying on a discrete property flipping at an
+   exact keyframe.
+
+   The start subtracts `--s`, the trail's own length, so the comet clears the
+   edge on narrow viewports too: at 390px a 164px trail is 42vw, and a flat
+   -40vw start would leave its tail poking into the screen while still dim.
+   Don't retime these percentages, or drop that `- var(--s)`, without
+   re-checking that every dim phase is still fully off-screen. */
+@keyframes season-comet {
+  0% {
+    transform: translate3d(calc(-40vw - var(--s)), 0, 0) rotate(var(--r0));
+    opacity: 0;
+  }
+  15% {
+    opacity: calc(var(--o) * var(--particle-opacity));
+  }
+  85% {
+    opacity: calc(var(--o) * var(--particle-opacity));
+  }
+  100% {
+    transform: translate3d(140vw, var(--dy), 0) rotate(var(--r0));
+    opacity: 0;
+  }
+}
+
+/* Halloween's flight path: a crossing that lurches. `x` still advances evenly
+   so the item gets across, but `y` veers above and below the line four times
+   and the rotation tumbles between two extremes, so nothing about it reads as
+   a straight glide.
+
+   Same off-screen fade invariant as the comets — at 12% it hasn't reached the
+   left edge and by 88% it's past the right one — which is what lets it carry a
+   static `pointer-events: auto`. */
+@keyframes season-swoop {
+  0% {
+    transform: translate3d(calc(-30vw - var(--s)), 0, 0) rotate(var(--r0));
+    opacity: 0;
+  }
+  12% {
+    opacity: calc(var(--o) * var(--particle-opacity));
+  }
+  27% {
+    transform: translate3d(16vw, calc(var(--dy) * -0.85), 0) rotate(var(--r1));
+  }
+  45% {
+    transform: translate3d(38vw, calc(var(--dy) * 0.95), 0) rotate(calc(var(--r0) * -1));
+  }
+  63% {
+    transform: translate3d(60vw, calc(var(--dy) * -0.7), 0) rotate(var(--r1));
+  }
+  78% {
+    transform: translate3d(84vw, calc(var(--dy) * 0.55), 0) rotate(calc(var(--r1) * -1));
+  }
+  88% {
+    transform: translate3d(calc(106vw + var(--s)), calc(var(--dy) * 0.2), 0) rotate(var(--r0));
+    opacity: calc(var(--o) * var(--particle-opacity));
+  }
+  100% {
+    transform: translate3d(132vw, 0, 0) rotate(var(--r0));
+    opacity: 0;
+  }
+}
+
+@keyframes space-nebula {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.14);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
   }
 }
 
@@ -448,8 +945,10 @@ a {
     opacity: 0.2;
   }
 
-  /* Easter is exempt: culling eggs would make those facts unreachable. */
-  .season-bg:not(.season-bg--easter) .season-particle:nth-child(2n) {
+  /* Only the decorative field is thinned. The interactive layers are exempt —
+     culling a find would make the fact behind it unreachable on phones — and
+     `.season-scatter` isn't a `.season-bg` at all, so it's never matched. */
+  .season-bg:not(.season-bg--collect):not(.season-bg--sky) .season-particle:nth-child(2n) {
     display: none;
   }
 
@@ -465,5 +964,20 @@ a {
     animation: none !important;
     transform: none !important;
     top: var(--y) !important;
+  }
+
+  /* The nebula stays as a still backdrop; only the wheeling stops. */
+  .space body::after {
+    animation: none !important;
+  }
+
+  /* Comets park at a spread of static positions rather than being hidden:
+     they carry Space's facts, and hiding them would put those out of reach for
+     anyone who asked for reduced motion. Snowflakes and the perimeter finds
+     freeze where they are on their own and stay clickable. */
+  .season-comet,
+  .season-swoop {
+    left: var(--rmx) !important;
+    top: var(--rmy) !important;
   }
 }

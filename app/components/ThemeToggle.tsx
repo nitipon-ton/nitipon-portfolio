@@ -1,22 +1,27 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import {
   SEASONAL_CONFIG,
   THEME_SOURCE_KEY,
   resolveSeasonalTheme,
 } from "../lib/seasonalTheme";
+import { EggMark } from "./SeasonalBackground";
 
-const MODES = [
+const MODES: { value: string; label: string; icon: ReactNode }[] = [
   { value: "light", label: "Light", icon: "☀️" },
   { value: "dark", label: "Dark", icon: "🌙" },
   // Seasonal modes, in calendar order.
   { value: "valentine", label: "Valentine", icon: "💖" },
-  { value: "easter", label: "Easter", icon: "🥚" },
+  // A painted egg rather than 🥚: that one is a plain white shell, which is a
+  // breakfast egg, not an Easter egg.
+  { value: "easter", label: "Easter", icon: <EggMark index={0} className="egg-mark" /> },
+  { value: "summer", label: "Summer", icon: "🌴" },
+  { value: "space", label: "Space", icon: "🌌" },
   { value: "halloween", label: "Halloween", icon: "🎃" },
   { value: "christmas", label: "Christmas", icon: "🎄" },
-] as const;
+];
 
 /** false while server-rendering, true once hydrated — no setState in an effect. */
 const noopSubscribe = () => () => {};

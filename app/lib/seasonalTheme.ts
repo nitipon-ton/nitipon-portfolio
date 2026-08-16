@@ -29,10 +29,13 @@ export const THEME_SOURCE_KEY = "theme-source";
 export const SEASONAL_CONFIG: SeasonalConfig = {
   // "system" follows the visitor's OS setting. Change to "light",
   // "dark", or any theme name to pin the off-season default.
-  fallback: "dark",
+  fallback: "space",
 
   fixed: [
     { theme: "valentine", from: "02-07", to: "02-15" },
+    { theme: "summer", from: "06-01", to: "08-31" },
+    // World Space Week, the UN's fixed Oct 4–10 window.
+    { theme: "space", from: "10-04", to: "10-10" },
     { theme: "halloween", from: "10-24", to: "11-02" },
     { theme: "christmas", from: "12-01", to: "12-31" },
   ],

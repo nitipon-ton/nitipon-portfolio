@@ -12,7 +12,16 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       defaultTheme={SEASONAL_CONFIG.fallback}
       storageKey={THEME_STORAGE_KEY}
       enableSystem
-      themes={["light", "dark", "valentine", "easter", "halloween", "christmas"]}
+      themes={[
+        "light",
+        "dark",
+        "valentine",
+        "easter",
+        "summer",
+        "space",
+        "halloween",
+        "christmas",
+      ]}
       disableTransitionOnChange
     >
       {children}
