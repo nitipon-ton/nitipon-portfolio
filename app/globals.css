@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Class-based dark variant. `halloween` piggybacks on it so every existing
+   `dark:` utility keeps working, then gets re-tinted by the palette below. */
+@custom-variant dark (&:where(.dark, .dark *, .halloween, .halloween *));
+
 :root {
   color-scheme: light;
   --background: #f7fbff;
@@ -11,6 +15,18 @@
   --glow: rgba(59, 130, 246, 0.15);
   --accent: #1d4ed8;
   --accent-soft: #60a5fa;
+
+  /* page-level ambience */
+  --bg-mid: rgba(247, 251, 255, 0.94);
+  --bg-glow-a: rgba(96, 165, 250, 0.18);
+  --bg-glow-b: rgba(99, 102, 241, 0.12);
+  --grid-line: rgba(255, 255, 255, 0.05);
+  --selection: rgba(59, 130, 246, 0.35);
+
+  /* floating background particles */
+  --particle-ink: rgba(30, 64, 175, 0.45);
+  --particle-glow: rgba(59, 130, 246, 0.18);
+  --particle-opacity: 0.5;
 }
 
 .dark {
@@ -24,6 +40,158 @@
   --glow: rgba(56, 189, 248, 0.16);
   --accent: #60a5fa;
   --accent-soft: #38bdf8;
+
+  --bg-mid: rgba(2, 6, 23, 0.94);
+  --bg-glow-a: rgba(56, 189, 248, 0.16);
+  --bg-glow-b: rgba(99, 102, 241, 0.14);
+  --grid-line: rgba(148, 163, 184, 0.06);
+  --selection: rgba(56, 189, 248, 0.35);
+
+  --particle-ink: rgba(125, 211, 252, 0.42);
+  --particle-glow: rgba(56, 189, 248, 0.22);
+  --particle-opacity: 0.55;
+}
+
+/* ---------------------------------------------------------------
+   Christmas — light based (Tailwind `dark:` utilities stay off),
+   slate warmed slightly and the sky accent turned evergreen.
+   --------------------------------------------------------------- */
+.christmas {
+  color-scheme: light;
+  --background: #f8fbf9;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --foreground: #14261c;
+  --muted: #4b5d52;
+  --border: rgba(20, 83, 45, 0.14);
+  --glow: rgba(220, 38, 38, 0.15);
+  --accent: #b91c1c;
+  --accent-soft: #15803d;
+
+  --bg-mid: rgba(246, 251, 248, 0.94);
+  --bg-glow-a: rgba(220, 38, 38, 0.16);
+  --bg-glow-b: rgba(21, 128, 61, 0.14);
+  --grid-line: rgba(255, 255, 255, 0.06);
+  --selection: rgba(220, 38, 38, 0.28);
+
+  --particle-opacity: 0.75;
+
+  --color-sky-400: #22c55e;
+  --color-sky-500: #16a34a;
+  --color-sky-600: #15803d;
+  --color-sky-700: #14532d;
+  --color-slate-50: #fbfaf8;
+  --color-slate-100: #f4f6f3;
+  --color-slate-200: #e3e9e4;
+  --color-slate-300: #cbd6ce;
+}
+
+/* ---------------------------------------------------------------
+   Halloween — dark based. Redefining Tailwind's slate/sky scales
+   re-skins every existing `dark:` utility to purple + pumpkin.
+   --------------------------------------------------------------- */
+.halloween {
+  color-scheme: dark;
+  --background: #0b0612;
+  --surface: rgba(27, 16, 41, 0.88);
+  --surface-strong: rgba(27, 16, 41, 0.96);
+  --foreground: #f3e8d6;
+  --muted: #b49dc9;
+  --border: rgba(251, 146, 60, 0.2);
+  --glow: rgba(249, 115, 22, 0.18);
+  --accent: #fb923c;
+  --accent-soft: #a855f7;
+
+  --bg-mid: rgba(11, 6, 18, 0.94);
+  --bg-glow-a: rgba(249, 115, 22, 0.2);
+  --bg-glow-b: rgba(147, 51, 234, 0.18);
+  --grid-line: rgba(251, 146, 60, 0.05);
+  --selection: rgba(249, 115, 22, 0.35);
+
+  --particle-opacity: 0.8;
+
+  --color-slate-50: #faf7fc;
+  --color-slate-100: #f2ebf7;
+  --color-slate-200: #e6d9f0;
+  --color-slate-300: #d3bfe4;
+  --color-slate-400: #b49dc9;
+  --color-slate-500: #8b6fa8;
+  --color-slate-600: #5f4478;
+  --color-slate-700: #3d2854;
+  --color-slate-800: #2a1a3d;
+  --color-slate-900: #1b1029;
+  --color-slate-950: #120a1c;
+  --color-sky-400: #fdba74;
+  --color-sky-500: #f97316;
+  --color-sky-600: #ea580c;
+  --color-sky-700: #c2410c;
+}
+
+/* ---------------------------------------------------------------
+   Valentine — light based, rose and blush.
+   --------------------------------------------------------------- */
+.valentine {
+  color-scheme: light;
+  --background: #fff5f8;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --foreground: #3d1524;
+  --muted: #7a4a5c;
+  --border: rgba(225, 29, 72, 0.16);
+  --glow: rgba(244, 63, 94, 0.15);
+  --accent: #e11d48;
+  --accent-soft: #fb7185;
+
+  --bg-mid: rgba(255, 245, 248, 0.94);
+  --bg-glow-a: rgba(244, 63, 94, 0.18);
+  --bg-glow-b: rgba(251, 113, 133, 0.14);
+  --grid-line: rgba(255, 255, 255, 0.06);
+  --selection: rgba(244, 63, 94, 0.28);
+
+  --particle-opacity: 0.85;
+
+  --color-sky-400: #fb7185;
+  --color-sky-500: #f43f5e;
+  --color-sky-600: #e11d48;
+  --color-sky-700: #be123c;
+  --color-slate-50: #fffafb;
+  --color-slate-100: #fdf2f5;
+  --color-slate-200: #f8e1e8;
+  --color-slate-300: #eec6d2;
+}
+
+/* ---------------------------------------------------------------
+   Easter — light based pastel. The background field here is
+   interactive, so it sits above the content (see .season-bg--easter).
+   --------------------------------------------------------------- */
+.easter {
+  color-scheme: light;
+  --background: #fdf8ff;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --foreground: #241a2e;
+  --muted: #5b4a68;
+  --border: rgba(168, 85, 247, 0.16);
+  --glow: rgba(236, 72, 153, 0.14);
+  --accent: #db2777;
+  --accent-soft: #a78bfa;
+
+  --bg-mid: rgba(253, 248, 255, 0.94);
+  --bg-glow-a: rgba(244, 114, 182, 0.18);
+  --bg-glow-b: rgba(94, 234, 212, 0.16);
+  --grid-line: rgba(255, 255, 255, 0.06);
+  --selection: rgba(236, 72, 153, 0.28);
+
+  --particle-opacity: 0.9;
+
+  --color-sky-400: #c084fc;
+  --color-sky-500: #a855f7;
+  --color-sky-600: #9333ea;
+  --color-sky-700: #7e22ce;
+  --color-slate-50: #fdfaff;
+  --color-slate-100: #f7f1fb;
+  --color-slate-200: #ece1f4;
+  --color-slate-300: #d8c8e6;
 }
 
 @theme inline {
@@ -40,9 +208,9 @@ html {
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 24%),
-    radial-gradient(circle at 80% 10%, rgba(99, 102, 241, 0.12), transparent 18%),
-    linear-gradient(180deg, var(--background) 0%, rgba(247, 251, 255, 0.94) 40%, var(--background) 100%);
+  background: radial-gradient(circle at top left, var(--bg-glow-a), transparent 24%),
+    radial-gradient(circle at 80% 10%, var(--bg-glow-b), transparent 18%),
+    linear-gradient(180deg, var(--background) 0%, var(--bg-mid) 40%, var(--background) 100%);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
@@ -51,12 +219,12 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(0deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 80px 80px;
   opacity: 0.3;
   pointer-events: none;
-  z-index: -1;
+  z-index: -2;
 }
 
 * {
@@ -64,7 +232,7 @@ body::before {
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.35);
+  background: var(--selection);
   color: var(--foreground);
 }
 
@@ -109,8 +277,8 @@ a {
 .hero-glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 18%),
-    radial-gradient(circle at 10% 25%, rgba(14, 165, 233, 0.12), transparent 24%);
+  background: radial-gradient(circle at top right, var(--bg-glow-a), transparent 18%),
+    radial-gradient(circle at 10% 25%, var(--bg-glow-b), transparent 24%);
   pointer-events: none;
   z-index: 0;
 }
@@ -123,8 +291,168 @@ a {
   border-radius: 999px;
 }
 
+/* ---------------------------------------------------------------
+   Seasonal floating background
+   Only `transform` and `opacity` are animated so every particle
+   stays on the compositor and never triggers layout or paint.
+   --------------------------------------------------------------- */
+.season-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  contain: layout paint style;
+}
+
+.season-particle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  opacity: calc(var(--o) * var(--particle-opacity));
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+  backface-visibility: hidden;
+}
+
+.season-math {
+  font-family: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
+  font-size: var(--s);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: var(--particle-ink);
+  text-shadow: 0 0 20px var(--particle-glow);
+  animation: season-drift var(--dur) ease-in-out var(--delay) infinite alternate;
+}
+
+.season-emoji {
+  font-size: var(--s);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+  animation: season-drift var(--dur) ease-in-out var(--delay) infinite alternate;
+}
+
+.season-haunt {
+  animation: season-haunt var(--dur) ease-in-out var(--delay) infinite;
+}
+
+/* Hearts drift upward like bubbles rather than falling. */
+.season-heart {
+  top: 100%;
+  font-size: var(--s);
+  filter: drop-shadow(0 4px 10px rgba(190, 18, 60, 0.2));
+  animation: season-rise var(--dur) linear var(--delay) infinite;
+}
+
+.season-snow {
+  top: 0;
+  color: #ffffff;
+  font-size: var(--s);
+  text-shadow: 0 0 8px rgba(148, 197, 255, 0.8);
+  animation: season-fall var(--dur) linear var(--delay) infinite;
+}
+
+/* Easter eggs are clickable, so this layer sits ABOVE the content
+   instead of behind it. The container stays click-through; only the
+   eggs themselves catch pointer events. */
+.season-bg--easter {
+  z-index: 30;
+}
+
+.season-egg {
+  pointer-events: auto;
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  font-size: var(--s);
+  filter: drop-shadow(0 4px 10px rgba(88, 28, 135, 0.22));
+  animation: season-drift var(--dur) ease-in-out var(--delay) infinite alternate;
+  /* `scale` is its own property, so hover feedback composes with the
+     `transform` the keyframes are driving instead of fighting it. */
+  transition: scale 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+
+.season-bg .season-egg:hover,
+.season-bg .season-egg:focus-visible {
+  opacity: 1;
+  scale: 1.3;
+  filter: drop-shadow(0 6px 16px rgba(219, 39, 119, 0.45));
+}
+
+.season-bg .season-egg:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+.season-bg .season-egg--found {
+  opacity: calc(var(--o) * 0.4);
+  filter: grayscale(0.55) drop-shadow(0 2px 6px rgba(88, 28, 135, 0.15));
+}
+
+@keyframes season-drift {
+  from {
+    transform: translate3d(0, 0, 0) rotate(var(--r0));
+  }
+  to {
+    transform: translate3d(var(--dx), var(--dy), 0) rotate(var(--r1));
+  }
+}
+
+@keyframes season-haunt {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(var(--dx), var(--dy), 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes season-rise {
+  from {
+    transform: translate3d(0, 8vh, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(var(--dx), -112vh, 0) rotate(var(--r1));
+  }
+}
+
+@keyframes season-fall {
+  from {
+    transform: translate3d(0, -14vh, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(var(--dx), 114vh, 0) rotate(var(--r1));
+  }
+}
+
+/* Thin the field out on phones — fewer layers, same look. */
 @media (max-width: 768px) {
   body::before {
     opacity: 0.2;
+  }
+
+  /* Easter is exempt: culling eggs would make those facts unreachable. */
+  .season-bg:not(.season-bg--easter) .season-particle:nth-child(2n) {
+    display: none;
+  }
+
+  .season-math {
+    font-size: calc(var(--s) * 0.8);
+  }
+}
+
+/* Respect reduced motion: keep the decoration, drop every animation.
+   `--y` places each particle where it would otherwise have drifted. */
+@media (prefers-reduced-motion: reduce) {
+  .season-particle {
+    animation: none !important;
+    transform: none !important;
+    top: var(--y) !important;
   }
 }

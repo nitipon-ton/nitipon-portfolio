@@ -2,6 +2,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
+import SeasonalBackground from "./components/SeasonalBackground";
+import { seasonalBootstrapScript } from "./lib/seasonalTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -74,7 +76,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        {/* Must stay the first thing in <body>: it seeds the seasonal default
+            into storage before next-themes' own script reads it, so the right
+            theme is painted on the first frame. */}
+        <script dangerouslySetInnerHTML={{ __html: seasonalBootstrapScript() }} />
+        <Providers>
+          {children}
+          {/* Rendered last so Easter's clickable eggs land at the end of the
+              tab order rather than ahead of the page's real content. */}
+          <SeasonalBackground />
+        </Providers>
       </body>
     </html>
   );

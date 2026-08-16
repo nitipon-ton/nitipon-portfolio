@@ -5,7 +5,7 @@
       className="relative overflow-hidden px-6 pt-32 pb-20 text-slate-950 dark:text-slate-100 sm:px-8"
     >
       <div className="hero-glow" aria-hidden="true" />
-      <div className="mx-auto flex min-h-[75vh] max-w-6xl flex-col gap-10 rounded-[36px] border border-slate-200/80 bg-white/85 p-8 shadow-[0_40px_90px_-40px_rgba(15,23,42,0.3)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/85 sm:p-12 md:flex-row md:items-center">
+      <div className="mx-auto flex min-h-[75vh] max-w-6xl flex-col gap-10 rounded-[36px] border border-slate-200/80 bg-white/75 p-8 shadow-[0_40px_90px_-40px_rgba(15,23,42,0.3)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/75 sm:p-12 md:flex-row md:items-center">
         <div className="relative flex-shrink-0">
           <div className="absolute -left-10 -top-10 h-24 w-24 rounded-full bg-gradient-to-br from-sky-400/30 to-indigo-500/20 blur-3xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-100 shadow-2xl shadow-slate-900/10 dark:border-slate-700/80 dark:bg-slate-900">

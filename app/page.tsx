@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
 
       <main className="px-6 pb-20 pt-10 sm:px-8 lg:px-10">
-        <section id="about" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+        <section id="about" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/75 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/75">
           <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-6">
             About Me
           </h2>
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+        <section id="experience" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/75 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/75">
           <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-8">
             Experience
           </h2>
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+        <section id="projects" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/75 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/75">
           <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-8">
             Projects
           </h2>
@@ -170,7 +170,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="achievements" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+        <section id="achievements" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/75 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/75">
           <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-6">
             Achievements
           </h2>
@@ -264,7 +264,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <section id="interview" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+        <section id="interview" className="mb-16 rounded-[2rem] border border-slate-200/80 bg-white/75 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/75">
           <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-8">
             Interviews
           </h2>
@@ -294,7 +294,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/80">
+        <section id="contact" className="rounded-[2rem] border border-slate-200/80 bg-white/75 p-8 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.18)] backdrop-blur dark:border-slate-700/80 dark:bg-slate-950/75">
           <h2 className="section-heading text-4xl font-semibold text-slate-950 dark:text-white mb-6">
             Contact
           </h2>
