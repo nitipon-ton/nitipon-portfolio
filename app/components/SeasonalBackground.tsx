@@ -225,7 +225,9 @@ function buildEaster(): Particle[] {
     className: "season-particle season-egg",
     style: {
       "--x": `${round(pos[i].x)}%`,
-      "--y": `${round(pos[i].y)}%`,
+      // Squeezed into the top 90% so the lowest row is never half-clipped by
+      // the layer's `overflow: hidden`, which would cut its click target too.
+      "--y": `${round(pos[i].y * 0.9)}%`,
       "--s": `${round(1.5 + rnd() * 0.9)}rem`,
       "--o": round(0.62 + rnd() * 0.25),
       "--dx": `${round(-22 + rnd() * 44)}px`,

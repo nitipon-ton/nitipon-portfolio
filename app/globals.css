@@ -357,6 +357,17 @@ a {
    eggs themselves catch pointer events. */
 .season-bg--easter {
   z-index: 30;
+  /* The fixed header sits at z-50 and would swallow these clicks. Because this
+     layer is itself fixed, any egg landing under the header is unreachable
+     forever — so the field starts below it. */
+  inset: 7rem 0 0 0;
+}
+
+/* The header title wraps to two lines on narrow screens, making it taller. */
+@media (max-width: 767px) {
+  .season-bg--easter {
+    inset: 9rem 0 0 0;
+  }
 }
 
 .season-egg {
