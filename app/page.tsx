@@ -120,7 +120,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2">
             <ProjectCard
               title="High-performance Wordle Bot"
-              desc="Suggests optimal Wordle guesses using an expectimax and minimax algorithm, achieving 3.50 average guesses, a 98% success rate within 4 guesses, and 100% success within 5 guesses."
+              desc="Suggests optimal Wordle guesses using an expectimax and minimax algorithm, achieving 3.45 average guesses, a 99% success rate within 4 guesses, and 100% success within 5 guesses."
               img="/wordle.jpg"
               link="https://wordle-analyzer-nu.vercel.app/"
               tags={["Python", "Algorithm", "Minimax", "Simulation", "Probability", "Data Analysis", "HTML/CSS"]}
