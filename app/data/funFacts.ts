@@ -92,6 +92,12 @@ export const FUN_FACTS: FunFact[] = [
     emoji: "🔒",
   },
   {
+    title: "People came asking",
+    fact: "Breaking records across Thailand's 2022 national admission exams led to interview invitations from OnDemand and AtHome, two well-known Thai education platforms — both wanting to hear how the Math and Science papers were done.",
+    emoji: "🎤",
+    link: { label: "Watch the interview", href: "https://www.youtube.com/watch?v=FBTvc63f00A" },
+  },
+  {
     title: "A clean sweep",
     fact: "At the Thailand Earth Science Olympiad 2021, took the Gold Medal AND was top scorer in Theory, Practical, and Overall — all three at once.",
     emoji: "🥇",

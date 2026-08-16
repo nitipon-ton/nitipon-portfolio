@@ -326,7 +326,7 @@ export default function Home() {
             <ContactCard
               title="Facebook"
               desc="Nitipon Trimaitreepituk"
-              img="/Facebook.jpg"
+              img="/Facebook.png"
               link="https://www.facebook.com/nitipon.trimaitreepituk/"
             />
           </div>
