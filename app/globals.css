@@ -213,8 +213,10 @@
 .summer {
   color-scheme: light;
   --background: #fffbf2;
-  --surface: rgba(255, 255, 255, 0.88);
-  --surface-strong: rgba(255, 255, 255, 0.96);
+  /* Cards are lighter here than in the other themes so the sky and the sun
+     read through them as frosted glass instead of being blanked out. */
+  --surface: rgba(255, 255, 255, 0.76);
+  --surface-strong: rgba(255, 255, 255, 0.9);
   --foreground: #123240;
   --muted: #4a6b76;
   --border: rgba(13, 148, 136, 0.16);
@@ -222,13 +224,20 @@
   --accent: #0d9488;
   --accent-soft: #f59e0b;
 
-  --bg-mid: rgba(255, 247, 233, 0.94);
-  --bg-glow-a: rgba(251, 191, 36, 0.2);
-  --bg-glow-b: rgba(45, 212, 191, 0.16);
+  /* Summer paints its own body gradient below (sky down to sand), so these
+     two are left as gentle accents rather than the main wash. */
+  --bg-mid: rgba(236, 250, 249, 0.9);
+  --bg-glow-a: rgba(45, 212, 191, 0.14);
+  --bg-glow-b: rgba(251, 191, 36, 0.16);
   --grid-line: rgba(255, 255, 255, 0.06);
   --selection: rgba(20, 184, 166, 0.28);
 
   --particle-opacity: 0.85;
+
+  /* Where the sun sits. The rays, the disc and the warm patch of sky all key
+     off these, so moving the sun moves the whole light source with it. */
+  --sun-x: 93%;
+  --sun-y: 15%;
 
   --color-sky-400: #2dd4bf;
   --color-sky-500: #14b8a6;
@@ -316,6 +325,130 @@ body::before {
   opacity: 0.3;
   pointer-events: none;
   z-index: -2;
+}
+
+/* ---------------------------------------------------------------
+   Summer's sky. Three layers, built the way Space's is: the sky it
+   all sits against, the light, then the source of the light.
+   --------------------------------------------------------------- */
+
+/* The sky. On its own fixed layer rather than as the body's background,
+   because the body is the height of the whole document — a sky painted there
+   would be blue for the first screen and plain sand for the seven after it,
+   while the fixed sun kept hanging in front of them. This stays put, the way
+   a sky does. The warm patch is pinned to the sun so the two agree. */
+.summer::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -5;
+  background: radial-gradient(
+      circle at var(--sun-x) var(--sun-y),
+      rgba(255, 209, 128, 0.6),
+      rgba(255, 224, 168, 0.24) 24%,
+      transparent 52%
+    ),
+    linear-gradient(180deg, #b3e4f2 0%, #cfeef1 20%, #e8f7ef 46%, #fbf3e0 76%, #fdeed8 100%);
+}
+
+/* God rays, wheeling out of the sun. A repeating conic gradient is the whole
+   trick — the spokes come for free — and a radial mask fades them out with
+   distance so they don't reach the far corner as hard edges.
+
+   Sized to the rays' own reach (the mask is fully transparent by 46% of the
+   box) rather than to the viewport. A layer big enough to cover the screen
+   from a corner would be several times the area, and this one is rotating. */
+.summer::before {
+  content: "";
+  position: fixed;
+  left: var(--sun-x);
+  top: var(--sun-y);
+  width: 120vmax;
+  height: 120vmax;
+  pointer-events: none;
+  z-index: -4;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 186, 74, 0.42) 0deg 2deg,
+    rgba(255, 186, 74, 0) 2deg 8.5deg,
+    rgba(255, 214, 130, 0.26) 8.5deg 10deg,
+    rgba(255, 214, 130, 0) 10deg 17deg
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    #000 0%,
+    rgba(0, 0, 0, 0.62) 13%,
+    rgba(0, 0, 0, 0.24) 29%,
+    transparent 46%
+  );
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    #000 0%,
+    rgba(0, 0, 0, 0.62) 13%,
+    rgba(0, 0, 0, 0.24) 29%,
+    transparent 46%
+  );
+  animation: summer-rays 150s linear infinite;
+}
+
+/* The sun itself, in front of its own rays so the disc stays clean.
+
+   The core is gold rather than white: on a pale page a white sun is invisible,
+   because it has nothing to be brighter *than*. The saturation is what reads as
+   light here, not the luminance. */
+.summer body::after {
+  content: "";
+  position: fixed;
+  left: var(--sun-x);
+  top: var(--sun-y);
+  width: 62vmin;
+  height: 62vmin;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -3;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 251, 235, 1) 0%,
+    rgba(255, 236, 160, 1) 5%,
+    rgba(255, 206, 84, 0.98) 8.5%,
+    rgba(255, 178, 54, 0.7) 11%,
+    rgba(255, 170, 60, 0.42) 15%,
+    rgba(255, 168, 66, 0.26) 22%,
+    rgba(255, 172, 78, 0.15) 34%,
+    rgba(255, 178, 92, 0.07) 52%,
+    transparent 72%
+  );
+  /* Breathing light. Opacity only, so it stays on the compositor. */
+  animation: summer-sun 9s ease-in-out infinite alternate;
+}
+
+/* On a phone there is no margin to hang the sun in — the content runs edge to
+   edge — so at 93% its core is clipped off the side. Bring it inboard and let
+   it read through the frosted card instead of past it. */
+@media (max-width: 767px) {
+  .summer {
+    --sun-x: 78%;
+    --sun-y: 23%;
+  }
+}
+
+@keyframes summer-rays {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes summer-sun {
+  from {
+    opacity: 0.86;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Space only: a nebula wheeling behind everything. Deliberately one big
@@ -966,8 +1099,10 @@ a {
     top: var(--y) !important;
   }
 
-  /* The nebula stays as a still backdrop; only the wheeling stops. */
-  .space body::after {
+  /* Backdrops stay as still images; only their motion stops. */
+  .space body::after,
+  .summer::before,
+  .summer body::after {
     animation: none !important;
   }
 
