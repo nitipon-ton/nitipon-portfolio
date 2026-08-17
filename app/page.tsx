@@ -162,10 +162,18 @@ export default function Home() {
             />
             <ProjectCard
               title="Portfolio Website"
-              desc="Aesthetic, animated Next.js portfolio built from scratch with Framer Motion, Tailwind CSS, and responsive design."
+              desc="This site. Eight themes that change themselves with the calendar, each with a hand-built CSS backdrop — a masked Milky Way, a wheeling nebula, a sun casting god rays — and fun facts hidden behind things you can catch. Every looping animation is transform and opacity only."
               img="/profile.jpg"
               link="#"
-              tags={["Next.js", "React", "Tailwind", "Framer Motion"]}
+              tags={[
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind",
+                "Framer Motion",
+                "CSS Animation",
+                "Accessibility",
+              ]}
             />
           </div>
         </section>
